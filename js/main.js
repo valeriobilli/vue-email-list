@@ -13,12 +13,11 @@ createApp({
                 .then((risposta) => {
                     this.emails.push(risposta.data.response)
                 })
+        },
+        tenRandomEmails: function () {
+            for (let i = 0; i < 10; i++) {
+                this.randomEmail();
+            }
         }
     },
-    mounted() {
-        console.log("Mounted iniziato");
-
-
-        console.log("Mounted terminato");
-    }
 }).mount('#app')
