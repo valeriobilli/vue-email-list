@@ -18,10 +18,10 @@
         <h1>Random emails generator</h1>
         <br><br>
         <span>Genera email:</span>
-        <button @click="metodo">Clicca</button>
+        <button @click="randomEmail">Clicca</button>
         <br><br>
         <ul>
-            <li></li>
+            <li v-for="email in emails"> {{email}}</li>
         </ul>
     </div>
     <script src="./js/main.js"></script>

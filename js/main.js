@@ -8,12 +8,16 @@ createApp({
         }
     },
     methods: {
-        randomEmail() {
-            console.log("metodo che stampa un dato: ", this.chiave);
+        randomEmail: function () {
+            axios.get(this.mailApi)
+                .then((risposta) => {
+                    this.emails.push(risposta.data.response)
+                })
         }
     },
     mounted() {
         console.log("Mounted iniziato");
+
 
         console.log("Mounted terminato");
     }
