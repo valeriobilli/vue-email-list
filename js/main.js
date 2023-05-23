@@ -3,11 +3,12 @@ const { createApp } = Vue;
 createApp({
     data() {
         return {
-            chiave: "valore",
+            emails: [],
+            mailApi: "https://flynn.boolean.careers/exercises/api/random/mail"
         }
     },
     methods: {
-        metodo() {
+        randomEmail() {
             console.log("metodo che stampa un dato: ", this.chiave);
         }
     },
